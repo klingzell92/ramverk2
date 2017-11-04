@@ -1,3 +1,51 @@
+html {
+    background-color: black;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+}
+
 a {
-    color: #00b7ff;
+    color: #243d51;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-wrap {
+    min-height: 60vh;
+}
+
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2.5em;
+    border-top: 1px solid #ccc;
+    background-color: black;
+    color: #fff;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.me {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.me img {
+    width: 50%;
+    border: 5px solid #000;
+}
+
+.image img {
+    width: 15%;
 }

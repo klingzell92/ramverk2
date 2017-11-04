@@ -1,11 +1,33 @@
 extend layout.pug
 
 block main
-    h1 Redovisningar
-    h3 kmom01
-    h3 kmom02
-    h3 kmom03
-    h3 kmom04
-    h3 kmom05
-    h3 kmom06
-    h3 kmom10
+    div.main
+        h1 Redovisningar
+        h3 kmom01
+        h4 Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
+        p.
+            Jag kollade inte överdrivet mycket på andra ramverk eller templateengines utan valde att köra på med Express och Pug.
+            Om man jämför Express med t.ex. Anax så känns det mycket mindre fast jag vet ännu inte vilket ramverk jag föredrar utav de två. En skilnad till är ju att man med Express inte bara kan göra en hemsida utan dessutom köra igång en server.
+            Men annars så är det väldigt likt andra ramverk då det innehåller ungefär samma delar med routes och så samt att man kan ta hand om requests och responses.
+            Pug är ett template språk som används för att skapa vyer till sidan. Man skrev sin html kod på ett liknande sett på ett liknande sätt i mithril men detta känns ändå bättre då det mer påminner om vanlig html.
+            Jag hade nog föredragit att kunna skriva helt vanligt helt vanlig html i mina vyer men det gick snabbt att vänja sig vid syntaxen för pug så det kommer nog gå bra.
+
+
+        h4 Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
+        p.
+            Jag valde att scaffolda fram den strukturen som man får när man använder npm install express-generator -g. Jag ändrade inte någonting på den strukturen då jag tyckte att den fungerar på ett bra sätt och är liknande så som jag har haft det förut.
+            Något som jag kanske kommer göra framöver är att flytta alla routes till egna filer just nu ligger alla i samma fil. Det kan nog vara bra när man skall ha olika typer av requests till en route.
+
+        h4 Använde du någon form av scaffolding som Express erbjuder?
+        p Ja jag använde som sagt npm install express-generator -g. Det var riktigt smidigt att kunna scaffolda fram en fungerande version på det sättet.
+
+        h4 Jobbar du med Markdown för innehållet, eller annat liknande?
+        p.
+            Nej jag har valt att inte jobba med markdown. Jag tycker att Markdown är mycket krångligare än att jobba direkt med HTML.
+            Nu jobbar jag ju inte direkt med HTML i det här fallet men jag föredrar nog pug över Markdown.
+        h3 kmom02
+        h3 kmom03
+        h3 kmom04
+        h3 kmom05
+        h3 kmom06
+        h3 kmom10
