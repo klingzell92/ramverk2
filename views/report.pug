@@ -26,6 +26,28 @@ block main
             Nej jag har valt att inte jobba med markdown. Jag tycker att Markdown är mycket krångligare än att jobba direkt med HTML.
             Nu jobbar jag ju inte direkt med HTML i det här fallet men jag föredrar nog pug över Markdown.
         h3 kmom02
+        h4 Har du jobbat med Docker eller andra virtualiseringstekniker innan?
+        p.
+            Det här var första gången som jag jobbade med docker men jag har hört talas om det sedan tidigare. Jag har tidigare jobbat med Virtualbox som är lite liknande docker.
+            Fast i virtualbox så skapar man ju ett helt operativsystem och det gör man ju inte riktigt i docker. Utan i docker skapar man containrar där man kan köra sin app i olika miljöer.
+
+        h4 Hur ser du på möjligheterna att använda dig av Docker för att jobba med tester av ditt repo?
+        p.
+            Som jag nämnde tidigare så just möjligheten att kunna köra sitt repo i olika miljöer är nog bra för att testa sitt repo. Då kan man t.ex. testa sin kod i olika versioner utav Node eller PHP.
+            Men jag vet inte riktigt hur detta skall fungera i praktiken utan jag behöver läsa på mer om docker. Utav det lilla som jag har använt mig av docker så känns det helt klart användbart.
+
+        h4 Gick allt smidigt eller stötte du på problem?
+        p.
+            Jag stötte på en hel del problem när jag skulle installera docker. Först så tänkte jag använda mig utav docker toolbox då jag hade Windoes Home och det fungerade hyffsat men det verkade så mycket jobbigare än att bara köra med docker.
+            Eftersom jag hade så mycket problem med docker toolbox så valde jag att uppgradera till Windows Education då vi ändå fick det gratis via skolan. Det löste de flesta problemen men jag hade fortfarande problem med att jag inte kunde komma åt filerna på servern.
+            För att kunna göra det så var jag tvungen att stänga av brandväggen. Jag googlade efter en annan lösning på problemet men inget av det jag har hittat har fungerat för mig.
+            Det fungerar dock inte när jag kör igång en container via docker run vilket är konstigt. Fast när jag kör igång via en docker-compose fil så fungerar det, för att klara uppgiften så var det ju bara det man behövde göra så för tillfället bryr jag mig inte så mycket om att det andra inte fungerar.
+            Vad gäller uppgiften så gick det bra dels så hade vi ju php-delen klar då vi gjorde det i övningen. Sedan för Node hittade jag en bra guide för hur man skulle göra på github, men jag behövde ändra lite på den så det blev lite mer likt så som vi gjorde i övningen för att det skulle fungera.
+            Det jag behövde ändra på var att istället för expose skriva port och sedan ange en port på det här sättet "8089:1337".
+
+        h4 Skapade du din egen image, berätta om den?
+        p Då jag lade så mycket tid på felsökning av olika problem så hann jag inte med att kolla på detta. Men det kanske jag kommer göra framöver någon gång.
+
         h3 kmom03
         h3 kmom04
         h3 kmom05
