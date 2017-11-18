@@ -13,6 +13,10 @@
 	"requireCamelCaseOrUpperCaseIdentifiers": {
 		"ignoreProperties": true
 	},
+	"excludeFiles": [
+	  "node_modules/**",
+	  "coverage/**"
+	],
 
 	"requireCurlyBraces": [
 		"if",
