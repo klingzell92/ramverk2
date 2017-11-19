@@ -3,7 +3,7 @@ checks:
 
 filter:
     excluded_paths:
-        - coverage/*    
+        - coverage/*
 
 build:
     dependencies:
@@ -16,5 +16,5 @@ build:
                 #command: 'istanbul cover --report clover test.js'
                 command: 'npm run test-scrutinizer'
                 coverage:
-                    file: '/coverage/clover.xml'
+                    file: 'coverage/clover.xml'
                     format: 'clover'
