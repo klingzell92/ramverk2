@@ -4,3 +4,21 @@
 
 Ramverk 2
 ====================
+Installera
+--------------
+Börja med att clona repot härifrån Github. Och kör efter det:
+
+```shell
+npm install
+```
+För att köra alla tester så kör man:
+
+```shell
+npm test
+```
+
+För att köra alla tester i docker så använder man:
+
+```shell
+npm run test1 test2 test3
+```
