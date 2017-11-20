@@ -11,7 +11,11 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/report', function(req, res) {
-    res.render('report', { title: 'Om' });
+    res.render('report', { title: 'Report' });
+});
+
+router.get('/app', function(req, res) {
+    res.render('app', { title: 'App' });
 });
 
 module.exports = router;
