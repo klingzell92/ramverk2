@@ -49,6 +49,32 @@ block main
         p Då jag lade så mycket tid på felsökning av olika problem så hann jag inte med att kolla på detta. Men det kanske jag kommer göra framöver någon gång.
 
         h3 kmom03
+        h4 Berätta vilka tekniker/verktyg du valde för enhetstester och kodtäckning och varför?
+        p.
+            Jag kollade runt lite på olika verktyg för enhetstester främst kollade jag på Jasmine och Mocha som verkar vara de mest använda verktygen.
+            Det blev Mocha till slut dels för att jag gillade deras guide om hur man använder det bättre. Jag valde att skriva mina asserts med expect.js biblioteket då jag kände att man kunde skriva fler typer av asserts med det än assert.
+            För kodtäckning så använder jag nyc precis som i artikeln. På redovisningssidan så hade jag inte något att testa så jag skrev bara ett testfall för att visa att det fungerar.
+
+        h4 Berätta om cin CI-kedja och reflektera över de valen du gjorde?
+        p.
+            Jag valde Travis för att kolla så att min sida byggs utan några fel. Sedan för kodkvalitet och kodtäckning så avnänder jag Scrutinizer som jag har använt tidigare och jag tycker att det fungerar bra.
+            Jag hade lite problem med att få kodtäckningen för scrutinizer att fungera. Det jag behövde göra var att ladda upp coverage mappen för att scrutinizer skulle hitta clover.xml filen. Så min CI-kedja ser i stort sett ut som tidigare i Ramverk1-kursen.
+
+        h4 Reflektera över hur det gick att integrera enhetstesterna i olika Docker-kontainerns och om du ser någon nytta med detta.
+        p.
+            Jag hade inga större problem med detta utan kunde följa hur man skulle göra i artikeln. Jag har tre olika docker images som jag använder node alpine, node 6-alpine och node 7-alpine.
+            Sedan kör man igång dem med npm run test1, test2 eller test3. Nyttan med detta är ju att kan testa sin kod i olika miljöer och se till så att det fungerar för en specifik version utav t.ex. node.
+
+        h4 Hur väl lyckades du utvärdera TDD-konceptet och vilka är dina reflektioner?
+        p.
+            Då jag knappt har börjat med min app och fortfarande är lite osäker på vad jag ska göra så har jag inte provat på TDD än. Men jag vet inte hur väl jag själv kommer att kunna använda mig utav den här metoden.
+            Det känns svårt att utveckla på det sättet där man skriver tester som misslyckas och sedan skriver kod som gör att testerna går igenom. Fast det blir säkert lättare att tänka på det sättet ju mer man gör det.
+            En fördel med det är väl att man får kod som är testbar redan från början.
+
+        h4 Berätta om tankarna kring din klient/server applikation och nämn de tekniker du använder.
+        p.
+            Jag vill gärna göra något typ utav spel som min applikation. Men har ännu inte riktigt kommit på någonting som kan passa med tanke på vad som skall ingå med databas och webbsockets.
+            Men jag har förberett själva repot med en CI-kedja och jag använder precis som i redovisa repot express som server och pug för att visa vyerna.
         h3 kmom04
         h3 kmom05
         h3 kmom06
