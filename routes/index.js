@@ -14,8 +14,8 @@ router.get('/report', function(req, res) {
     res.render('report', { title: 'Report' });
 });
 
-router.get('/app', function(req, res) {
-    res.render('app', { title: 'App' });
+router.get('/application', function(req, res) {
+    res.render('application', { title: 'App' });
 });
 
 module.exports = router;
