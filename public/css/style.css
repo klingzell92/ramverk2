@@ -49,3 +49,11 @@ a:hover {
 .image img {
     width: 15%;
 }
+
+#connect_url {
+    display: none;
+}
+
+#close {
+    display: none;
+}

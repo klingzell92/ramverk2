@@ -18,4 +18,8 @@ router.get('/application', function(req, res) {
     res.render('application', { title: 'App' });
 });
 
+router.get('/chat', function(req, res) {
+    res.render('chat', { title: 'Chatt' });
+});
+
 module.exports = router;
