@@ -55,13 +55,12 @@
         connect.className += " hidden";
         close.style.display = "block";
         messageContainer.style.display ="block";
-
+        protocol.value = "json";
         if (!protocol.value) {
             websocket = new WebSocket(url.value);
         } else {
             websocket = new WebSocket(url.value, setSubProtocol());
         }
-        protocol.style.display ="none";
         websocket.onopen = function() {
             console.log("The websocket is now open.");
             console.log(websocket);
@@ -120,7 +119,6 @@
         connect.classList.remove("hidden");
         close.style.display = "none";
         messageContainer.style.display ="none";
-        protocol.style.display ="block";
         websocket.send("Client closing connection by intention.");
         websocket.close();
         console.log(websocket);
