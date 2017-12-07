@@ -1,0 +1,19 @@
+extend layout.pug
+
+block main
+    div.main
+        h3 Redigera en film
+        form(method='POST' action='/update')
+            input(type="hidden" name="id" value=movie._id)
+
+            div(class="form-group")
+                input(class="form-control" name="title" type="text" value=movie.title)
+
+            div(class="form-group")
+                input(class="form-control" name="director" type="text" value=movie.director)
+
+            div(class="form-group")
+                input(class="form-control" name="release" type="text" value=movie.release)
+
+            div(class="form-group")
+                input(class="btn btn-primary" type="submit" value="Spara filmen")

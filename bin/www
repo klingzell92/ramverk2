@@ -8,6 +8,10 @@ var app = require('../app');
 var debug = require('debug')('redovisa:server');
 var http = require('http');
 
+// MongoDB
+const mongo = require("mongodb").MongoClient;
+const dsn =  process.env.DBWEBB_DSN || "mongodb://localhost:27017/movie";
+
 /**
  * Get port from environment and store in Express.
  */
@@ -25,6 +29,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 console.log("Server listens to port: " + port);
+console.log(`DSN is: ${dsn}`);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
