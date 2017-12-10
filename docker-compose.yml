@@ -21,7 +21,7 @@ services:
         environment:
             - MONGO_DATA_DIR=/data/db
         volumes:
-            - ./data2/db:/data2/db
+            - ./data/db:/data/db
         ports:
             - 27017:27017
         command: mongod

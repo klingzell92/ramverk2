@@ -99,5 +99,33 @@ block main
             Jag är fortfarande osäker på vad jag ska göra för applikation så jag har inte kunnat integrera det än. Men jag har lagt till koden för chatten i repot.
             För jag tror ändå att jag kommer att använda någon typ utav chatt i min applikation. Men det kanske finns andra sätt att använda websockets på också som kan vara användbara.
         h3 kmom05
+        h4 Hur gick det att komma igång med databasen MongoDB?
+        p.
+            Jag fick lite problem i början då jag inte kunde ansluta till MongoDB på grund av att det blev något fel med loggfilerna. För att lösa detta så behövde jag radera data mappen och sedan när jag körde docker-compose run mongodb mongo mongodb://mongodb igen så fungerade det.
+            Förövrigt så gick det helt okej, fast precis som med allt nytt tog det lite tid att vänja sig och jag behövde lägga mycket tid på att läsa i manualen.
+            Att implementera CRUD-delen gick releativt lätt när jag väl hade vant mig vid verktyget och jag hittade lättare i manualen. Jag valde att göra en databas för filmer som innehåller filmens namn, regissör samt utginvingsår.
+            Det blev en del upprepbarkod i routerna vilket jag nog skulle kunna åtgärda genom att skapa en modul för det.
+
+        h4 Vilken syn har du på databaser inom konceptet NoSQL?
+        p.
+            Jag har inte så mycket kunskaper om NoSQL databaser då detta var första gången som jag använde mig utav en sådan. Men av vad jag har förstått så skall databaser inom NoSQL på många sätt vara snabbare än relationsdatabaser.
+            Det känns lite friare då man inte jobbar mot tabeller och att man för t.ex. MongoDB inte behöver bestämma på förhand vad som skall sparas ned i dokumenten. Sedan är det smidigt att kunna joba med JSON-onjekt.
+
+        h4 Reflektera över skillnader och likheter mellan relationsdatabaser och databaser inom NoSQL.
+        p.
+            Den stora skillnaden som jag kan se är att man inom NoSQL inte använder sig utav tabeller, utan andra datastrukturer såsom t.ex. dokument.
+            En annan skillnad är att man i relationsdatabaser behöver definera sådant som primärnycklar eller index innan man lägger till data. Medans man i NoSQL inte behöver ha någon särskild design på sina dokument utan man kan lägga till vilken data man vill när man vill.
+            Vad jag har förstått så finns det inte någon motsvarighet till JOIN i NoSQL vilket kan vara jobbigt när man vill visa upp data.
+
+        h4 Vilka är dina tankar om asynkron programmering med JavaScript?
+        p.
+            Det var lite knepigt att komma igång och skriva sin kod med async och await. Men det känns som ett bra sätt att skriva sin kod på för att den ska exekveras i det flödet som man har tänkt sig.
+            Som i det här fallet med databasen vill man ju om man ska hämta data se till att den är hämtad innan man kör sidan.
+
+        h4 Hur känner du för Docker och det sättet vi jobbar med tjänster i kontainrar?
+        p.
+            Docker brukar kunna krångla en del för mig men på det stora hela tycker jag att det är ett bra verktyg. Som jag nämnt tidigare så är det ju bra för att kunna testa sin kod i olika miljöer och versioner.
+            Det var också väldigt smidigt att kunna dela upp sin kod i flera kontainrar som kör samtidigt.
+
         h3 kmom06
         h3 kmom10
