@@ -17,8 +17,8 @@ För att köra alla tester så kör man:
 npm test
 ```
 
-För att köra alla tester i docker så använder man:
+För att starta alla tjänster i docker så kör man:
 
 ```shell
-npm run test1 test2 test3
+ docker-compose up
 ```
