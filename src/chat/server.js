@@ -6,7 +6,6 @@
 const port = process.env.DBWEBB_PORT || 1338;
 const express = require("express");
 const http = require("http");
-//const url = require("url");
 const WebSocket = require("ws");
 
 const app = express();
@@ -18,23 +17,15 @@ const wss = new WebSocket.Server({
 });
 
 
-
-// Answer on all http requests
-app.use(function (req, res) {
-    console.log("HTTP request on " + req.url);
-    res.send({ msg: "hello" });
-});
-
 /**
  * Select subprotocol to use for connection.
  *
  * @param {Array} protocols              Subprotocols to choose from, sent
  *                                        by client request.
- * @param {http.IncomingMessage} request The client HTTP GET request.
  *
  * @return {void}
  */
-function handleProtocols(protocols /*, request */) {
+function handleProtocols(protocols) {
     console.log(`Incoming protocol requests '${protocols}'.`);
     for (var i=0; i < protocols.length; i++) {
         if (protocols[i] === "text") {
@@ -45,9 +36,6 @@ function handleProtocols(protocols /*, request */) {
     }
     return false;
 }
-
-
-
 
 /**
  * Broadcast data to everyone except one self (ws).
@@ -82,7 +70,6 @@ function broadcastExcept(ws, data) {
 
 
 // Setup for websocket requests.
-// Docs: https://github.com/websockets/ws/blob/master/doc/ws.md
 wss.on("connection", (ws /*, req*/) => {
     console.log("Connection received. Adding client.");
     broadcastExcept(ws, `New client connected (${wss.clients.size}).`);
