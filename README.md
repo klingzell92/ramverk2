@@ -6,7 +6,7 @@ Ramverk 2
 ====================
 Tekniker
 ------------
-Som backend och server så valde jag att använda mig utav Express och sedan för att visa vyerna använder jag mig utav pug. För databasen så använder jag mig utav MongoDB.
+Som backend och server så valde jag att använda mig utav Express och sedan för att visa vyerna använder jag mig utav pug. För databasen så använder jag mig utav MongoDB. Jag använder mig utav WebSockets för min chatt och sedan för testerna så används Mocha.
 
 Installera
 --------------
@@ -15,11 +15,7 @@ Börja med att clona repot härifrån Github. Och kör efter det:
 ```shell
 npm install
 ```
-För att köra alla tester så kör man:
 
-```shell
-npm test
-```
 För att starta servern utan MongoDB så kör man:
 ```shell
 npm start
