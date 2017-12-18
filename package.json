@@ -6,6 +6,7 @@
     "start": "node ./bin/www",
     "test": "npm run htmlhint & npm run stylelint & npm run eslint & npm run jscs & npm run unittest",
     "unittest": "nyc --reporter=html --reporter=text mocha test/**/*.js",
+    "start-docker": "docker-compose up express",
     "test1": "docker-compose run node_alpine npm test",
     "test2": "docker-compose run node_6_alpine npm test",
     "test3": "docker-compose run node_7_alpine npm test",
@@ -23,6 +24,7 @@
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "mongodb": "^2.2.33",
+    "mongodb-crud-phkl16": "^1.0.1",
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11",
     "serve-favicon": "~2.4.5"
@@ -32,7 +34,7 @@
     "codecov": "^3.0.0",
     "coveralls": "^3.0.0",
     "csslint": "^1.0.5",
-    "eslint": "^4.13.0",
+    "eslint": "^4.13.1",
     "eslint-plugin-react": "^7.5.1",
     "html-minifier": "^3.5.7",
     "htmlhint": "^0.9.13",
@@ -40,8 +42,8 @@
     "jscs": "^3.0.7",
     "jsonlint": "^1.6.2",
     "mocha": "^4.0.1",
-    "nyc": "^11.4.0",
-    "stylelint": "^8.3.1",
+    "nyc": "^11.4.1",
+    "stylelint": "^8.4.0",
     "supertest": "^3.0.0",
     "uglify-js": "^3.2.2"
   }
