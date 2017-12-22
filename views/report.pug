@@ -133,4 +133,25 @@ block main
 
         p Efter att du klonat repot behöver du köra git checkout/tag för att få rätt version
         h3 kmom06
+        h4 Reflektera över vikten av infrastruktur för moduler för ett programmeringsspråk.
+        p.
+            Moduler är bra på så sätt att man får en bättre struktur och man får återanvändbar kod. Det är viktigt med en bra infrastruktur för moduler då man via pakethanterare kan inkludera någon annans lösning på ett problem och att man på så sätt sparar tid.
+            Fördelen med just pakethanterare och t.ex. npm är att de är enkla att använda och man kan lätt installera en modul samt enkelt inkludera den med require. Det går också lätt att updatera sin modul så att man har rätt version om man använder pakethanterare.
+
+        h4 Vill du ge dig på att förklara att just npm är den tjänsten som växt snabbast av de modulerkataloger som presenteras på webbplatsen “Module Counts”?
+        p.
+            En faktor skulle nog kunna vara det faktum att de har en väldigt enkel hemsida som erbjuder bra hjälp över hur man kommer igång med att t.ex. hämta eller publisera moduler. Sedan är npm i sig också väldigt lätt att använda vilket nog spelar in.
+            Men den största anledningen är nog att Node som är starkt förknippat med npm samt att Javascript i stort är väldigt populärt just nu.
+
+        h4 Reflektera över hur arbetet gick att välja, separera, publisera och sedan åter integrera module i din applikation.
+        p.
+            Jag hade funderat redan i kmom05 på att göra en modul för att ansluta till databasen och metoder för crud delarna. Anledningen till det var att jag innan hade koden i mina routes och på grund av det blev det mycket upprepbar kod.
+            Det gick smidigt att separera koden och det blev en mycket bättre struktur på det här sättet. Det gick lätt att publisera modulen på npmjs då de hade en bra guide för hur man skulle göra.
+            Sedan efter att jag hade installerat min modul så hade jag lite problem då jag var tvungen att skriva hela sökvägen när jag skulle göra en require. Men det var lätt fixat då man kan lägga till vilken fil som skulle användas med main i package.json.
+
+        h4 Sista uppgiften om att dokumentera och färdigställa redovisa-sidan, tog det mycket tid eller hade du allt klart?
+        p.
+            Vad gäller README filen så hade jag inte skrivit särskilt mycket där innan utan bara hur man installerade repot. Så där behövde jag lägga till en del men det tog inte någon längre tid att göra klart.
+            Utöver det så fixade jag till scriptet start-docker för att starta alla tjänsterna i docker. Och sist så uppdaterade jag landningssidan för appen, så just den sista uppgiften tog inte upp alltför mycket tid.
+
         h3 kmom10

@@ -25,3 +25,30 @@ services:
         ports:
             - 27017:27017
         command: mongod
+
+    node_alpine:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-alpine
+        volumes:
+            - ./:/app/
+        ports:
+            - "3000:3000"
+
+    node_7_alpine:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-7-alpine
+        volumes:
+            - ./:/app/
+        ports:
+            - "3007:3000"
+
+    node_6_alpine:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-6-alpine
+        volumes:
+            - ./:/app/
+        ports:
+            - "3006:3000"

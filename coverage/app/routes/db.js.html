@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">15.38% </span>
+        <span class="strong">24.39% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/52</span>
+        <span class='fraction'>10/41</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">15.38% </span>
+        <span class="strong">24.39% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/52</span>
+        <span class='fraction'>10/41</span>
       </div>
     </div>
   </div>
@@ -122,29 +122,18 @@
 77
 78
 79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+80</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -165,10 +154,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,10 +162,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -204,9 +186,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -219,23 +198,21 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var express = require('express');
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// MongoDB
+const dsn =  process.env.DBWEBB_DSN || "mongodb://localhost:27017/movie";
+&nbsp;
+var express = require('express');
+var crud = require('mongodb-crud-phkl16')(dsn, 'movie');
 var router = express.Router();
 &nbsp;
 &nbsp;
 router.get('/db', <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >    try {</span>
-        const db  = <span class="cstat-no" title="statement not covered" >await mongo.connect(dsn);</span>
-        const col = <span class="cstat-no" title="statement not covered" >await db.collection('movie');</span>
-        const result = <span class="cstat-no" title="statement not covered" >await col.find().toArray();</span>
+        const result = <span class="cstat-no" title="statement not covered" >await crud.getAll();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        await db.close();</span>
 <span class="cstat-no" title="statement not covered" >        res.render('db', { title: 'DB', movies: result});</span>
     } catch (err) {
 <span class="cstat-no" title="statement not covered" >        console.log(err);</span>
@@ -251,11 +228,7 @@ router.post('/create', <span class="fstat-no" title="function not covered" >as</
     };
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    try {</span>
-        const db  = <span class="cstat-no" title="statement not covered" >await mongo.connect(dsn);</span>
-        const col = <span class="cstat-no" title="statement not covered" >await db.collection('movie');</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >        col.insert(movie);</span>
-<span class="cstat-no" title="statement not covered" >        await db.close();</span>
+<span class="cstat-no" title="statement not covered" >        await crud.create(movie);</span>
 <span class="cstat-no" title="statement not covered" >        res.redirect('/db');</span>
     } catch (err) {
 <span class="cstat-no" title="statement not covered" >        console.log(err);</span>
@@ -267,11 +240,8 @@ router.get('/edit/:id', <span class="fstat-no" title="function not covered" >as<
     let id = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    try {</span>
-        const db  = <span class="cstat-no" title="statement not covered" >await mongo.connect(dsn);</span>
-        const col = <span class="cstat-no" title="statement not covered" >await db.collection('movie');</span>
-        const result = <span class="cstat-no" title="statement not covered" >await col.find({"_id": ObjectId(id)}).toArray();</span>
+        const result = <span class="cstat-no" title="statement not covered" >await crud.find(id);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        console.log(result[0]);</span>
 <span class="cstat-no" title="statement not covered" >        res.render('edit', { title: 'Redigera', movie: result[0]});</span>
     } catch (err) {
 <span class="cstat-no" title="statement not covered" >        console.log(err);</span>
@@ -289,10 +259,7 @@ router.post('/update', <span class="fstat-no" title="function not covered" >as</
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    console.log(id);</span>
 <span class="cstat-no" title="statement not covered" >    try {</span>
-        const db  = <span class="cstat-no" title="statement not covered" >await mongo.connect(dsn);</span>
-        const col = <span class="cstat-no" title="statement not covered" >await db.collection('movie');</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >        col.update({  "_id": ObjectId(id) }, movie);</span>
+<span class="cstat-no" title="statement not covered" >        await crud.update(id, movie);</span>
 <span class="cstat-no" title="statement not covered" >        res.redirect('/db');</span>
     } catch (err) {
 <span class="cstat-no" title="statement not covered" >        console.log(err);</span>
@@ -304,10 +271,7 @@ router.get('/remove/:id', <span class="fstat-no" title="function not covered" >a
     let id = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    try {</span>
-        const db  = <span class="cstat-no" title="statement not covered" >await mongo.connect(dsn);</span>
-        const col = <span class="cstat-no" title="statement not covered" >await db.collection('movie');</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >        col.remove({  "_id": ObjectId(id) });</span>
+<span class="cstat-no" title="statement not covered" >        await crud.delete(id);</span>
 <span class="cstat-no" title="statement not covered" >        res.redirect('/db');</span>
     } catch (err) {
 <span class="cstat-no" title="statement not covered" >        console.log(err);</span>
@@ -322,7 +286,7 @@ module.exports = router;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 15 2017 10:21:13 GMT+0000 (UTC)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2017 21:51:40 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
