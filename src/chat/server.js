@@ -3,7 +3,7 @@
  */
 "use strict";
 
-const port = process.env.DBWEBB_PORT || 1338;
+const port = 1338;
 const express = require("express");
 const http = require("http");
 const WebSocket = require("ws");

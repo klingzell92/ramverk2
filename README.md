@@ -21,16 +21,24 @@ För att starta servern utan MongoDB så kör man:
 npm start
 ```
 
-För att starta alla tjänster inklusive MongoDB i docker så kör man:
+För att starta servern inklusive MongoDB i docker så kör man:
 
 ```shell
  npm run start-docker
+```
+
+För att starta chatservern så kör man:
+
+```shell
+ npm run start-chat
 ```
 
 Portar
 ----------
 Man kan använda sig utav följande systemvariabler för att ändra porten som servern lyssnar på DBWEBB_PORT, PORT och LOCAL_DEV_PORT.
 Om inget värde har satts för någon av systemvariablerna så används port 1337 som default.
+
+Chatservern använder sig utav port 1338
 
 MongoDB kan använda sig utav systemvariabeln DBWEBB_DSN fast default är mongodb://localhost:27017
 
